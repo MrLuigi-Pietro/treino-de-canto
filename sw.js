@@ -1,5 +1,5 @@
 /* Rede primeiro, cache como reserva: o app abre offline e sempre pega a versão nova quando há internet. */
-var CACHE = 'canto-v3';
+var CACHE = 'canto-v4';
 var SHELL = ['./', 'index.html', 'manifest.webmanifest'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
